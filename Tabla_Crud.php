@@ -10,7 +10,8 @@ include 'bd.php';
 <title>Crud Gaming</title>
     
 <link rel="stylesheet" href="public/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--Esta linea de bootstrap sirve para crear iconos
+donde se llevara a cabo en botones de editar y borrar para -->
 </head>
 <body>
     <div class="container mt-5">
@@ -83,7 +84,7 @@ include 'bd.php';
             </div>
         </div>
     </div>
-    
+     <!--Esta linea de script sirve para mensajes de alerta en este caso de 'Producto guardado'-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
