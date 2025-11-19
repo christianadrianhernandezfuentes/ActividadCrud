@@ -1,11 +1,20 @@
 <?php
 
-$conexion = pg_connect("host=localhost port=5432 dbname=Productos_gaming user=postgres password=chris123");
+$host = getenv('DB_HOST') ?: "localhost";
+$port = getenv('DB_PORT') ?: "5432";
+$dbname = getenv('DB_NAME') ?: "Productos_gaming";
+$user = getenv('DB_USER') ?: "postgres";
+$password = getenv('DB_PASSWORD') ?: "chris123";
 
+$cadena_conexion = "host=$host port=$port dbname=$dbname user=$user password=$password";
+
+$conexion = pg_connect($cadena_conexion);
 
 if (!$conexion) {
+
     die("Como que error hombre el bd.php anda mal.");
 }
+
 
 function insertar($query, $datos) {
     global $conexion;
@@ -34,5 +43,4 @@ function actualizar($query, $datos) {
     pg_prepare($conexion, "", $query);
     pg_execute($conexion, "", $datos);
 }
-
 ?>
