@@ -1,13 +1,11 @@
-FROM php:8.2-apache
+FROM php:7.4-apache
 
 RUN apt-get update && apt-get install -y libpq-dev \
     && docker-php-ext-install pgsql pdo pdo_pgsql
 
-COPY . /var/www/html/
-
-# Dar permisos al servidor web
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+COPY . /var/www/html
 
 # puerto 80
 EXPOSE 80
+
+CMD [ "php", "-S", "0.0.0.0:8000" ]

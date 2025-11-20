@@ -2,7 +2,7 @@
 
 $host = getenv('DB_HOST') ?: "localhost";
 $port = getenv('DB_PORT') ?: "5432";
-$dbname = getenv('DB_NAME') ?: "Productos_gaming";
+$dbname = getenv('DB_NAME') ?: "productos_gaming";
 $user = getenv('DB_USER') ?: "postgres";
 $password = getenv('DB_PASSWORD') ?: "chris123";
 
